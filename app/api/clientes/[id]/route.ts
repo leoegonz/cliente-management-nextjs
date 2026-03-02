@@ -6,9 +6,10 @@ const prisma = new PrismaClient();
 // GET /api/clientes/[id] - Obtener un cliente específico
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: Promise<{ id: string }> }
 ) {
   try {
+    const params = await context.params;
     const id = parseInt(params.id);
 
     if (isNaN(id)) {
@@ -42,9 +43,10 @@ export async function GET(
 // PUT /api/clientes/[id] - Actualizar cliente
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: Promise<{ id: string }> }
 ) {
   try {
+    const params = await context.params;
     const id = parseInt(params.id);
 
     if (isNaN(id)) {
@@ -113,9 +115,10 @@ export async function PUT(
 // DELETE /api/clientes/[id] - Eliminar cliente
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: Promise<{ id: string }> }
 ) {
   try {
+    const params = await context.params;
     const id = parseInt(params.id);
 
     if (isNaN(id)) {
