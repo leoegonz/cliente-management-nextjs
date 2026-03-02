@@ -1,0 +1,117 @@
+{
+  "info": {
+    "name": "Cliente Management API",
+    "description": "API REST para gestión de clientes",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Listar todos los clientes",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/clientes",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "clientes"]
+        }
+      }
+    },
+    {
+      "name": "Buscar clientes",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/clientes?search=juan",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "clientes"],
+          "query": [
+            {
+              "key": "search",
+              "value": "juan"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Obtener cliente por ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/clientes/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "clientes", "1"]
+        }
+      }
+    },
+    {
+      "name": "Crear cliente",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Nuevo Cliente\",\n  \"email\": \"nuevo@example.com\",\n  \"estado\": true\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/clientes",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "clientes"]
+        }
+      }
+    },
+    {
+      "name": "Actualizar cliente",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Cliente Actualizado\",\n  \"email\": \"actualizado@example.com\",\n  \"estado\": false\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/clientes/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "clientes", "1"]
+        }
+      }
+    },
+    {
+      "name": "Eliminar cliente",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/clientes/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "clientes", "1"]
+        }
+      }
+    }
+  ]
+}
