@@ -67,11 +67,11 @@ export async function PUT(
       );
     }
 
-    // Validar formato de email
+    // Validar formato de mail
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       return NextResponse.json(
-        { error: 'Email inválido' },
+        { error: 'Formato de email inválido' },
         { status: 400 }
       );
     }
