@@ -4,12 +4,12 @@ Aplicación web full-stack para gestión de clientes construida con Next.js, Typ
 
 ## Características
 
-- CRUD completo de clientes
-- Búsqueda en tiempo real por nombre o email
-- Interfaz moderna y responsiva con Tailwind CSS
-- API REST con validaciones
-- Manejo de estados y errores
-- Base de datos PostgreSQL con Prisma ORM
+-  CRUD completo de clientes
+-  Búsqueda en tiempo real por nombre o email
+-  Interfaz moderna y responsiva con Tailwind CSS
+-  API REST con validaciones
+-  Manejo de estados y errores
+-  Base de datos PostgreSQL con Prisma ORM
 
 ##  Tecnologías
 
@@ -19,7 +19,7 @@ Aplicación web full-stack para gestión de clientes construida con Next.js, Typ
 - **ORM:** Prisma
 - **Validaciones:** Validación de email, campos requeridos
 
-## 📦 Instalación
+## Instalación
 
 ### Prerequisitos
 
@@ -31,7 +31,7 @@ Aplicación web full-stack para gestión de clientes construida con Next.js, Typ
 
 1. **Clonar el repositorio**
 ```bash
-git clone https://github.com/TU_USUARIO/cliente-management-nextjs.git
+git clone https://github.com/leoegonz/cliente-management-nextjs.git
 cd cliente-management-nextjs
 ```
 
@@ -93,7 +93,7 @@ La aplicación estará disponible en [http://localhost:3000](http://localhost:30
 }
 ```
 
-##  Postman Collection
+## Postman Collection
 
 Importa la colección `postman_collection.json` incluida en el repositorio para probar todos los endpoints.
 
@@ -134,7 +134,7 @@ cliente-management-nextjs/
 - Nombre y email requeridos
 - Manejo de errores con mensajes claros
 
-## 📄 Licencia
+## Licencia
 
 MIT
 
